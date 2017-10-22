@@ -37,7 +37,7 @@ def make(WORK, outname, names, formats, seed, ploidy):
                 ns.append(line.split()[0].replace(">",""))
                 ss.append(line.split()[-1])
             else:
-                pis = [i[0] for i in enumerate(line) if i[1] in list('*-')]
+                pis = [i[0] for i in enumerate(line) if i[1] in list('*')] # output only potentially informative SNPs
                 
         " assign snps to S, and record coverage for usnps"
         for tax in S:
