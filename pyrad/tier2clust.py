@@ -19,7 +19,7 @@ def cluster(UCLUST, ID, datatype, WORK, MASK):
         P = " -strand both"
         COV = ".90"
     else:
-        P = " -leftjust "
+        P = " " # change made to match ipyrad's behavior
         COV = ".90"
     if 'vsearch' not in UCLUST:
         Q = ""
