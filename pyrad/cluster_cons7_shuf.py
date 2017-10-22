@@ -74,7 +74,7 @@ def cluster(vsearch, handle, ID, datatype,
         P = " -strand both"
         COV = " -query_cov .90 "  ## this can vary 
     else:
-        P = " -leftjust "
+        P = " " # change made to match ipyrad's behavior
         COV = " -query_cov .90 "
     if 'vsearch' not in vsearch:
         Q = ""
