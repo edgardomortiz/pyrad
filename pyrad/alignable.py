@@ -445,14 +445,14 @@ def alignFUNC(infile, minspecies, ingroup,
                         first,second = y.split("nnnn")
                         space = ((longname+5)-len(x))
                         print >>nout, "{}{}{}nnnn{}".format(x, " "*space, first[FM1:SM1].upper(), second[FM2:SM2].upper())
-                    print >>nout, "//{}{}{}    {}|{}".format(D+P+S+I, " "*(longname+3-len(D+P+S+I)),
+                    print >>nout, "//{}{}{}    {}{}|".format(D+P+S+I, " "*(longname+3-len(D+P+S+I)),
                                                                snp1[FM1:SM1], snp2[FM2:SM2], notes)
 
                 else:
                     for x, y in zz:
                         space = ((longname+5)-len(x))
                         print >>nout, "{}{}{}".format(x, " "*space, y[FM1:SM1].upper())
-                    print >>nout, "//{}{}|{}".format(D+P+S+I, " "*(longname+3-len(D+P+S+I)),
+                    print >>nout, "//{}{}{}|".format(D+P+S+I, " "*(longname+3-len(D+P+S+I)),
                                                       "".join(snpsite[FM1:SM1]), notes)
 
                                     
